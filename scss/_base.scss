@@ -1,0 +1,33 @@
+/* =========================
+          Base Styles 
+   ========================= */
+  *{
+    box-sizing: border-box;
+  }
+   body {
+   	background: $bg-color url(../img/bg.png) right bottom no-repeat;
+   	margin: 0;
+   	padding: 5%; 
+   	font: 10px/1.45 $sans-serif;
+    height: 100vh;
+   }
+
+	p {margin-bottom: 1.3em;}
+
+	h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+h2 {font-size: 2.827em;}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}

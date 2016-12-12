@@ -1,0 +1,93 @@
+/* =========================
+          Base Styles 
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee url(../img/bg.png) right bottom no-repeat;
+  margin: 0;
+  padding: 5%;
+  font: 10px/1.45 "Montserrat", sans-serif;
+  height: 100vh;
+}
+
+p {
+  margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.827em;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* =========================
+          Layout Styles 
+   ========================= */
+.wrapper {
+  max-width: 550px;
+  margin: 10% auto 0;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* =========================
+          Modules Styles 
+   ========================= */
+.controller {
+  float: right;
+  display: block;
+}
+
+.controller li {
+  display: inline-block;
+  float: left;
+  padding-left: 32px;
+}
+
+.controller a {
+  text-decoration: none;
+  background: url(../img/icon.png) no-repeat;
+  height: 22px;
+  width: 22px;
+  display: block;
+}
+
+.controller #new {
+  background-position: -24px 0px;
+}
+
+.controller #tweet {
+  background-position: -0px 0px;
+}
+
+/* =========================
+          Theme Styles 
+   ========================= */
+.quote {
+  color: #283739;
+}
+
+.author {
+  color: #f35b25;
+  font: 25px "Droid Serif", serif;
+}

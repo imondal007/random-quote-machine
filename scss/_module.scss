@@ -1,0 +1,30 @@
+/* =========================
+          Modules Styles 
+   ========================= */
+
+   .controller {
+   	float: right;
+   	display: block;
+   	li {
+   		display: inline-block;
+   		float: left;
+   		padding-left: 32px;
+   	}
+
+   	a {
+   		text-decoration: none;
+   		background: url(../img/icon.png) no-repeat;
+   		height: 22px;
+   		width: 22px;
+   		display: block;
+   	}
+
+   	#new {
+		background-position: -24px 0px;
+   	}
+
+   	#tweet {
+		background-position: -0px 0px;
+   	}
+   }
+
