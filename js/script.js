@@ -8,7 +8,7 @@ var url      =  "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&f
 // Getting Quote From Forismatic API
 function getQuote() {
 	$.getJSON(url, function(data) {
-		$(quote).text(data.[0]content);
+		$(quote).text(data[0].content);
 		$(author).text(data.quoteAuthor);
 		
 		//Storing Json Data To variable for using on tweet
