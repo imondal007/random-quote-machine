@@ -1,5 +1,5 @@
 //Declaring Variable
-var url      =  "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?",
+var url      =  "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=?",
 	quote    =  $(".quote"),
 	author   =  $(".author"),
 	newQuote =  $("#new"),
@@ -8,7 +8,7 @@ var url      =  "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&form
 // Getting Quote From Forismatic API
 function getQuote() {
 	$.getJSON(url, function(data) {
-		$(quote).text(data.quoteText);
+		$(quote).text(data.[0]content);
 		$(author).text(data.quoteAuthor);
 		
 		//Storing Json Data To variable for using on tweet
