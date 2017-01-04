@@ -12,8 +12,8 @@ function getQuote() {
 		$(author).text(data[0].title);
 		
 		//Storing Json Data To variable for using on tweet
-		tweetContent = data.quoteText,
-		tweetAuthor  = data.quoteAuthor;
+		tweetContent = data[0].content,
+		tweetAuthor  = data[0].content;
 	});
 
 };
