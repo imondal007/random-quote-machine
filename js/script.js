@@ -9,7 +9,7 @@ var url      =  "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&f
 function getQuote() {
 	$.getJSON(url, function(data) {
 		$(quote).text(data[0].content);
-		$(author).text(data.quoteAuthor);
+		$(author).text(data[0].title);
 		
 		//Storing Json Data To variable for using on tweet
 		tweetContent = data.quoteText,
