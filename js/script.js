@@ -1,5 +1,5 @@
 //Declaring Variable
-var url      =  "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?",
+var url      =  "http://leetm.cejsvmwqexmg.legsq.nl3.gsr.awhoer.net/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?",
 	quote    =  $(".quote"),
 	author   =  $(".author"),
 	newQuote =  $("#new"),
