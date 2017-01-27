@@ -1,7 +1,7 @@
 # Random Quote Machine
-A simple weather app Powered by Open Weather API.
-Demo: http://weather-app-fcc.surge.sh/
-Github: https://github.com/imondal007/weather-app.git
+Show random quote from external API
+Demo: http://random-quote-machine.surge.sh
+Github: https://github.com/imondal007/random-quote-machine.git
 
 Once you have cloned the repo, navigate in to the directory via terminal and run.
 
