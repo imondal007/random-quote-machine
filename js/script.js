@@ -1,32 +1,46 @@
 //Declaring Variable
-var url      =  "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?",
-	quote    =  $(".quote"),
-	author   =  $(".author"),
-	newQuote =  $("#new"),
-	tweet    =  $("#tweet");
+var url = "https://andruxnet-random-famous-quotes.p.mashape.com/",
+    key = "itf11qnc2FmshKaKlonst72vS7qEp1UMmipjsn50M9cSe2Qd0w",
+    contentType = "application/x-www-form-urlencoded",
+    quote = $(".quote"),
+    author = $(".author"),
+    newQuote = $("#new"),
+    tweet = $("#tweet");
 
 // Getting Quote From Forismatic API
 function getQuote() {
-	$.getJSON(url, function(data) {
-		$(quote).text(data.quoteText);
-		$(author).text(data.quoteAuthor);
-		
-		//Storing Json Data To variable for using on tweet
-		tweetContent = data.quoteText,
-		tweetAuthor  = data.quoteAuthor;
-	});
+    $.ajax({
+        url: url,
+        type: 'POST',
+        beforeSend: setHeader,
+        success: function(data) {
+            var quoteData = JSON.parse(data);
+            $(quote).text(quoteData.quote);
+            $(author).text(quoteData.author);
+
+            //Storing quoteData To variable for using on tweet
+            tweetContent = quoteData.quote,
+                tweetAuthor = quoteData.author;
+        }
+    })
+
+    function setHeader(xhr) {
+        xhr.setRequestHeader('X-Mashape-Key', key);
+        xhr.setRequestHeader('Content-Type', contentType);
+        xhr.setRequestHeader('Accept', 'application/json');
+    }
 
 };
 getQuote();
 
 // Loading New Quote
 $(newQuote).click(function(e) {
-	e.preventDefault();
-	getQuote();
+    e.preventDefault();
+    getQuote();
 })
 
 // Tweet Button
 $(tweet).click(function(e) {
-	e.preventDefault();
-	window.open("https://twitter.com/intent/tweet?text="+tweetContent+ " -"+tweetAuthor);
+    e.preventDefault();
+    window.open("https://twitter.com/intent/tweet?text=" + tweetContent + " -" + tweetAuthor);
 })
