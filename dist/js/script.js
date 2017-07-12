@@ -14,9 +14,11 @@ function getQuote() {
         type: 'POST',
         beforeSend: setHeader,
         success: function(data) {
-            var quoteData = JSON.parse(data);
+            var quoteData = data;
             $(quote).text(quoteData.quote);
             $(author).text(quoteData.author);
+
+            console.log(quoteData)
 
             //Storing quoteData To variable for using on tweet
             tweetContent = quoteData.quote,
